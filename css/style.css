@@ -28,7 +28,9 @@ nav, header, main, footer{
   font-weight: 800;
 }
 
-
+section{
+  overflow-y: hidden;
+}
 
 ul { 
   list-style:none;
@@ -43,7 +45,7 @@ ul {
 }
 
 .flexBox div{
-  padding: 0 5px 15px 5px;
+  padding: 0 5px 40px 5px;
 }
 
 
@@ -74,6 +76,9 @@ ul {
 }
 .bottomMargin20{
   margin-bottom: 20px;
+}
+.bottomPadding40{
+  padding-bottom: 40px;
 }
 
 
@@ -110,6 +115,10 @@ nav{
   grid-area: nav;
   padding: 0 50px 0 0;
   background: rgba(0, 0, 0, .4);
+  flex-grow: 3;
+  align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
 #navImg{
@@ -117,13 +126,7 @@ nav{
   justify-content: left;
   align-items: center;
 }
-#navList{
-  flex-grow: 3;
-  justify-content: right;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-}
+
 
 
 
