@@ -4,7 +4,7 @@ npm run watch-css
 @import '_colores';
 @import '_typography';
 @import '_animaciones';
-
+@import '_functions';
 
 
 *{
@@ -41,17 +41,9 @@ ul {
 }
 
 
-/*.threeColumIcon{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-}*/
-
-
 .threeColumIconImg{
-  height: 150px;
+  //height: 150px;
+  @include sizes(auto, 150px);
   margin-bottom: 10px;
 }
 .width200{
@@ -77,18 +69,20 @@ ul {
 
 .textoHeader{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   vertical-align: middle;
   color: white;
   padding-top: 30vh;
+  width: 100%;
 }
 
 
 a{
   text-decoration: none;
   color: white;
-  margin: 10px;
 }
 
 
@@ -108,6 +102,9 @@ nav{
   align-items: center;
   text-decoration: none;
   color: white;
+  a{
+    margin: 10px;
+  }
 }
 
 #navImg{
@@ -127,8 +124,10 @@ header{
   background-size: cover;
   grid-area: header;
   padding: 0;
-
   h1{
+    width: 350px;
+  }
+  h2{
     width: 350px;
   }
 }

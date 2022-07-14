@@ -53,14 +53,8 @@ ul {
 .flexBox div {
   padding: 0 5px 40px 5px; }
 
-/*.threeColumIcon{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-}*/
 .threeColumIconImg {
+  width: auto;
   height: 150px;
   margin-bottom: 10px; }
 
@@ -84,16 +78,18 @@ ul {
 
 .textoHeader {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   vertical-align: middle;
   color: white;
-  padding-top: 30vh; }
+  padding-top: 30vh;
+  width: 100%; }
 
 a {
   text-decoration: none;
-  color: white;
-  margin: 10px; }
+  color: white; }
 
 nav {
   display: flex;
@@ -108,6 +104,8 @@ nav {
   align-items: center;
   text-decoration: none;
   color: white; }
+  nav a {
+    margin: 10px; }
 
 #navImg {
   flex-grow: 1;
@@ -123,6 +121,8 @@ header {
   grid-area: header;
   padding: 0; }
   header h1 {
+    width: 350px; }
+  header h2 {
     width: 350px; }
 
 main {
