@@ -33,7 +33,7 @@ npm run watch-css
   box-sizing: border-box;
   overflow-x: hidden; }
 
-nav, header, main, footer {
+nav, header, main, footer aside {
   padding: 20px;
   font-weight: 800; }
 
@@ -43,6 +43,12 @@ section {
 ul {
   list-style: none;
   display: flex; }
+
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 30px; }
 
 .flexBox {
   display: flex;
@@ -87,6 +93,10 @@ ul {
   padding-top: 30vh;
   width: 100%; }
 
+.mapa {
+  width: 100%;
+  height: 622px; }
+
 a {
   text-decoration: none;
   color: white; }
@@ -111,6 +121,9 @@ nav {
   flex-grow: 1;
   justify-content: left;
   align-items: center; }
+
+aside {
+  grid-area: aside; }
 
 header {
   background-image: url("../img/header.jpg");
@@ -142,6 +155,9 @@ body {
   grid-template-rows: auto;
   grid-template-areas: "header" "main" "pie"; }
 
+.bodyContacto {
+  grid-template-areas: "header" "aside" "main" "pie"; }
+
 #index-body {
   grid-template-rows: 100vh; }
 
@@ -152,4 +168,7 @@ body {
     flex-direction: row; }
   body {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "header header header" "main main main" "pie pie pie"; } }
+    grid-template-areas: "header header header" "main main main" "pie pie pie"; }
+  .bodyContacto {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "main aside" "pie pie"; } }

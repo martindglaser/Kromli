@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<title>Kromli</title>
 </head>
-<body>
+<body class="bodyContacto">
 	<nav>
 		<a href="../index.html">
 			<img src="../img/kromli_logo.png" alt="logo" height="60">
@@ -33,37 +35,41 @@
 			</li>
 		</ul>
 	</nav>
-	<header>
-		<h1>Contacto</h1>
-	</header>
 	<main>
 		<section>
-			<form action="">
+			<h1>Contacto</h1>
+			<form class="contactForm" action="contacto.html">
 				<fieldset>
 					<legend>Info personal</legend>
-					<label for="name">Nombre</label>
-					<input type="text" id="name" placeholder="nombre">
-					<input type="email" id="email" placeholder="mail@algo.com">
+					<div class="lineaContacto">
+						<label>Nombre</label>
+						<input class="form-control" type="text" id="name" placeholder="Nombre">
+					</div>
+					<div>
+						<label>Email</label>
+						<input class="form-control" type="email" id="email" placeholder="mail@algo.com">
+					</div>
 				</fieldset>
 				<fieldset>
 					<legend>Tipo de mensaje</legend>
 					<label for="Envio">Reclamo</label>
-					<input type="radio" name="reclamo" id="reclamo" value="reclamo">
+					<input type="radio" name="reclamoSugerencia" id="reclamo" value="reclamo">
 					<label for="Local">Sugerencia</label>
-					<input type="radio" id="sugerencia" value="sugerencia" name="sugerencia">
+					<input type="radio" name="reclamoSugerencia" id="sugerencia" value="sugerencia">
 				</fieldset>
 				<label>Mensaje</label>
 				<br>
-				<textarea name="" id="" cols="30" rows="10"></textarea>
-				<input type="reset" value="Cancelar">
-				<input type="submit" value="Enviar">
+				<textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="10"></textarea>
+				<input class="btn btn-outline-danger" type="reset" value="Cancelar">
+				<input class="btn btn-outline-success" type="submit" value="Enviar">
 			</form>
 		</section>
-<!-- 		<section>
-			mapa	
-		</section> -->
 	</main>
-	<br>
+	<aside>
+		<!-- mapa -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.91478688828!2d-58.46068478523517!3d-34.55571286246579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5e16fd3dac3%3A0xfbc4fd2d1e875970!2sKromli!5e0!3m2!1ses-419!2sar!4v1658238226377!5m2!1ses-419!2sar" class="mapa" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</aside>
+
 	<footer>
 		<a href="https://instagram.com/kromli" target="_blank">
 			<img src="../img/instagram_logo.png" height="50px" alt="instagram">

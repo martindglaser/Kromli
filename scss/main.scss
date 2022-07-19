@@ -15,7 +15,7 @@ npm run watch-css
   overflow-x: hidden;
 }
 
-nav, header, main, footer{
+nav, header, main, footer aside{
   padding: 20px;
   font-weight: 800;
 }
@@ -27,6 +27,14 @@ section{
 ul { 
   list-style:none;
   display: flex;
+}
+
+h1{
+  font-size: 35px;
+}
+
+h2{
+  font-size: 30px;
 }
 
 .flexBox{
@@ -79,6 +87,10 @@ ul {
   width: 100%;
 }
 
+.mapa{
+  width: 100%;
+  height: 622px;
+}
 
 a{
   text-decoration: none;
@@ -114,6 +126,9 @@ nav{
 }
 
 
+aside{
+  grid-area: aside;
+}
 
 
 header{
@@ -160,6 +175,13 @@ body{
   "pie";
 }
 
+.bodyContacto{
+  grid-template-areas:
+  "header"
+  "aside"
+  "main"
+  "pie";
+}
 
 
 #index-body{
@@ -180,5 +202,12 @@ body{
     "header header header"
     "main main main"
     "pie pie pie";
+  }
+  .bodyContacto{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "pie pie"; 
   }
 }
