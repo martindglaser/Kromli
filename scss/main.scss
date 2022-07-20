@@ -36,17 +36,59 @@ h1{
 h2{
   font-size: 30px;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 
 .flexBox{
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
-
-.flexBox div{
-  padding: 0 5px 40px 5px;
+.planes{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  h2{
+    margin-bottom: 0;
+  }
 }
+
+.col{
+  height: 40px;
+}
+
+
+.socialMediaContainer{
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  a{
+    color: black;
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  img{
+    height: 20px;
+  }
+}
+.datosContacto{
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  p{
+    color: black;
+    font-size: 15px;
+    width: 300px;
+    margin-bottom: 0;
+  }
+  img{
+    height: 20px;
+  }
+}
+
 
 
 .threeColumIconImg{
@@ -92,10 +134,7 @@ h2{
   height: 622px;
 }
 
-a{
-  text-decoration: none;
-  color: white;
-}
+
 
 
 
@@ -157,9 +196,8 @@ main{
 footer{
   background-color: $color4;
   grid-area: pie;
-  a{
-    padding: 10px;
-  }
+  display: flex;
+  padding: 10px 0 10px 0;
 }
 
 
@@ -183,6 +221,9 @@ body{
   "pie";
 }
 
+.indexCont{
+  display: flex;
+}
 
 #index-body{
   grid-template-rows: 100vh;
@@ -190,11 +231,13 @@ body{
 
 
 @media screen and (min-width: 768px){
-  .threeColumIcon{
-    flex-direction: row;
-  }
-  .flexBox{
-    flex-direction: row;
+  .indexTextImg{
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    p{
+      align-self: center;
+    }
   }
   body{
     grid-template-columns: repeat(3, 1fr);
