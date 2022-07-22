@@ -24,7 +24,9 @@ npm run watch-css
     transform: translateY(0); } }
 
 .transform {
-  animation: 1s ease-out 0s 1 slideInFromLeft; }
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  padding-bottom: 40px;
+  overflow-y: hidden; }
 
 * {
   padding: 0;
@@ -54,44 +56,16 @@ a {
   text-decoration: none;
   color: white; }
 
-.flexBox {
-  display: flex;
-  align-items: center; }
-
 .planes {
   display: flex;
   flex-direction: column;
   flex-grow: 1; }
+  .planes button {
+    margin: 10px 0 10px 0; }
   .planes h2 {
     margin-bottom: 0; }
-
-.col {
-  height: 40px; }
-
-.socialMediaContainer {
-  padding-left: 50px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; }
-  .socialMediaContainer a {
-    color: black;
-    font-size: 15px;
-    padding-bottom: 5px; }
-  .socialMediaContainer img {
-    height: 20px; }
-
-.datosContacto {
-  padding-right: 50px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; }
-  .datosContacto p {
-    color: black;
-    font-size: 15px;
-    width: 300px;
-    margin-bottom: 0; }
-  .datosContacto img {
-    height: 20px; }
+  .planes .col {
+    padding: 2px 0 2px 0; }
 
 .threeColumIconImg {
   width: auto;
@@ -99,10 +73,13 @@ a {
   margin-bottom: 10px; }
 
 .width200 {
-  width: 200px; }
+  max-width: 200px; }
 
 .textCenter {
   text-align: center; }
+
+.textLeft {
+  text-align: left; }
 
 .textMiddle {
   vertical-align: middle; }
@@ -131,21 +108,15 @@ a {
   width: 100%;
   height: 622px; }
 
-nav {
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  justify-content: space-around;
-  grid-area: nav;
-  padding: 0 50px 0 0;
-  background: rgba(0, 0, 0, 0.4);
-  flex-grow: 3;
-  align-items: center;
-  text-decoration: none;
+.nav-link {
   color: white; }
-  nav a {
-    margin: 10px; }
+
+.logo {
+  height: 60px; }
+
+nav {
+  grid-area: nav;
+  background: rgba(0, 0, 0, 0.4); }
 
 #navImg {
   flex-grow: 1;
@@ -164,19 +135,50 @@ header {
   grid-area: header;
   padding: 0; }
   header h1 {
-    width: 350px; }
+    max-width: 350px; }
   header h2 {
-    width: 350px; }
+    max-width: 350px; }
 
 main {
   grid-area: main;
-  margin-top: 60px; }
+  margin-top: 86px; }
+
+aside {
+  margin-top: 86px; }
 
 footer {
   background-color: #fff291;
   grid-area: pie;
   display: flex;
+  flex-direction: column;
+  align-content: space-between;
   padding: 10px 0 10px 0; }
+
+.socialMediaContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-self: center;
+  padding: 10px 0 10px 0; }
+  .socialMediaContainer a {
+    color: black;
+    font-size: 15px;
+    padding-bottom: 5px; }
+  .socialMediaContainer img {
+    height: 20px; }
+
+.datosContacto {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-self: center; }
+  .datosContacto p {
+    color: black;
+    font-size: 15px;
+    max-width: 300px;
+    margin-bottom: 0; }
+  .datosContacto img {
+    height: 20px; }
 
 body {
   display: grid;
@@ -189,21 +191,45 @@ body {
   grid-template-areas: "header" "aside" "main" "pie"; }
 
 .indexCont {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
 
 #index-body {
   grid-template-rows: 100vh; }
 
+.planesD {
+  display: none;
+  overflow-y: hidden; }
+
+.planesM {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden; }
+  .planesM .buttonContainer {
+    text-align: center;
+    padding: 10px 0 30px 0; }
+  .planesM .planesMCont {
+    align-self: center; }
+  .planesM .planesList {
+    display: flex;
+    flex-direction: column; }
+
 @media screen and (min-width: 768px) {
-  .indexTextImg {
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center; }
-    .indexTextImg p {
-      align-self: center; }
+  .planesD {
+    display: block; }
+  .planesM {
+    display: none; }
+  .indexCont {
+    flex-direction: row; }
+  .socialMediaContainer {
+    padding-left: 50px; }
   body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header header header" "main main main" "pie pie pie"; }
+  footer {
+    flex-direction: row; }
   .bodyContacto {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header header" "main aside" "pie pie"; } }

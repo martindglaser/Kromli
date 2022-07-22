@@ -7,78 +7,134 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<title>Kromli</title>
 </head>
-<body>
-	<nav>
-		<a id="navImg" href="../index.html">
-			<img src="../img/kromli_logo.png" alt="logo" height="60">
-		</a>
-
-		<ul style="align-items: center;" id="navList" class="nav justify-content-end">
-			<li class="nav-item">
-				<a href="planes.html">
-					Planes
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="novedades.html">
-					Novedades
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="nosotros.html">
-					Nosotros
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="contacto.html">
-					Contacto
-				</a>
-			</li>
-		</ul>
+<body class="bodyPlanes">
+	<nav class="navbar fixed-top navbar-expand-lg">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="../index.html">
+	    	<img class="logo" src="../img/kromli_logo.png">
+	    </a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="planes.html">Planes</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="novedades.html">Novedades</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="nosotros.html">Nosotros</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="contacto.html">Contacto</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
 	</nav>
 	<main>
 		<h1 class="bottomMargin20">Planes</h1>
-		<section class="flexBox textCenter">
-			<div class="transform planes">
-
-			  <div class="row">
-			  	<div class="col"></div>
-			    <div class="col">
-			      <h2>Plan 1</h2>
-			    </div>
-			    <div class="col">
-			      <h2>Plan 2</h2>
-			    </div>
-			    <div class="col">
-			      <h2>Plan 3</h2>
-			    </div>
-			  </div>
-			  <div class="row planesQualitys">
-			  	<div class="col">Reportes Basicos</div>
-			    <div class="col">X</div>
-			    <div class="col">X</div>
-			    <div class="col">X</div>
-			  </div>
-			  <div class="row">
-			  	<div class="col">Maxima Cant. Usuarios</div>
-			    <div class="col">10</div>
-			    <div class="col">50</div>
-			    <div class="col">Ilimitado</div>
-			  </div>
-			  <div class="row">
-			  	<div class="col">Reportes Avanzados</div>
-			    <div class="col"></div>
-			    <div class="col">X</div>
-			    <div class="col">X</div>
-			  </div>
-			  <div class="row">
-			  	<div class="col">Reportes para Clientes</div>
-			    <div class="col"></div>
-			    <div class="col"></div>
-			    <div class="col">X</div>
-			  </div>
-			</div>
-		</section>
+		
+			<section>
+				<div class="planesD textCenter">
+					<div class="transform planes">
+					  <div class="row">
+					  	<div class="col"></div>
+					    <div class="col">
+					      <h2>Plan 1</h2>
+					    </div>
+					    <div class="col">
+					      <h2>Plan 2</h2>
+					    </div>
+					    <div class="col">
+					      <h2>Plan 3</h2>
+					    </div>
+					  </div>
+					  <div class="row planesQualities">
+					  	<div class="col">Reportes Basicos</div>
+					    <div class="col">X</div>
+					    <div class="col">X</div>
+					    <div class="col">X</div>
+					  </div>
+					  <div class="row planesQualities">
+					  	<div class="col">Maxima Cant. Usuarios</div>
+					    <div class="col">10</div>
+					    <div class="col">50</div>
+					    <div class="col">Ilimitado</div>
+					  </div>
+					  <div class="row planesQualities">
+					  	<div class="col">Reportes Avanzados</div>
+					    <div class="col"></div>
+					    <div class="col">X</div>
+					    <div class="col">X</div>
+					  </div>
+					  <div class="row planesQualities">
+					  	<div class="col">Reportes para Clientes</div>
+					    <div class="col"></div>
+					    <div class="col"></div>
+					    <div class="col">X</div>
+					  </div>
+				  		<div class="row align-items-center suscribirme">
+					  		<div class="col"></div>
+					    	<div class="col">
+					    		<button class="btn btn-outline-success">
+					    			Suscribirme
+					    		</button>
+					    	</div>
+					    	<div class="col">
+					    		<button class="btn btn-outline-success">
+					    			Suscribirme
+					    		</button>
+					    	</div>
+					    	<div class="col">
+					    		<button class="btn btn-outline-success">
+					    			Suscribirme
+					    		</button>
+					    	</div>
+						</div>
+					</div>
+				</div>
+				<div class="planesM">
+					<div class="transform planesMCont">
+						<h2>Plan 1</h2>
+						<ul class="planesList">
+							<li>Reportes Basicos</li>
+							<li>10 Usuarios</li>
+						</ul>
+						<div class="buttonContainer">
+				    		<button class="btn btn-outline-success">
+				    			Suscribirme
+				    		</button>
+			    		</div>
+						<h2>Plan 2</h2>
+						<ul class="planesList">
+							<li>Reportes Basicos</li>
+							<li>50 Usuarios</li>
+							<li>Reportes Avanzados</li>
+						</ul>
+						<div class="buttonContainer">
+				    		<button class="btn btn-outline-success">
+				    			Suscribirme
+				    		</button>
+			    		</div>
+						<h2>Plan 3</h2>
+						<ul class="planesList">
+							<li>Reportes Basicos</li>
+							<li>Usuarios Ilimitados</li>
+							<li>Reportes Avanzados</li>
+							<li>Reportes para Clientes</li>
+						</ul>
+						<div class="buttonContainer">
+				    		<button class="btn btn-outline-success">
+				    			Suscribirme
+				    		</button>
+			    		</div>
+					</div>
+				</div>
+			</section>
+		</div>
 	</main>
 	<br>
 	<footer>
