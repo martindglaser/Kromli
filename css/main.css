@@ -188,7 +188,7 @@ body {
   grid-template-areas: "header" "main" "pie"; }
 
 .bodyContacto {
-  grid-template-areas: "header" "aside" "main" "pie"; }
+  grid-template-areas: "header" "main" "aside" "pie"; }
 
 .indexCont {
   display: flex;
