@@ -17,7 +17,6 @@ npm run watch-css
 
 nav, header, main, footer aside{
   padding: 20px;
-  font-weight: 800;
 }
 
 section{
@@ -61,8 +60,18 @@ a{
 
 
 
-
-
+.card{
+  width: 18rem; 
+}
+.novedadesCardContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .cardCont{
+    align-self:center;
+    margin-bottom: 10px;
+  }
+}
 
 .threeColumIconImg{
   //height: 150px;
@@ -123,6 +132,7 @@ a{
 nav{
   grid-area: nav;
   background: rgba(0, 0, 0, .4);
+  font-weight: 600;
 }
 
 #navImg{
@@ -289,5 +299,15 @@ body{
     "header header"
     "main aside"
     "pie pie"; 
+  }
+}
+
+
+@media screen and (min-width: 920px){
+  .novedadesCardContainer{
+    flex-direction: row;
+    .cardCont{
+      align-self:auto;
+    }
   }
 }

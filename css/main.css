@@ -36,8 +36,7 @@ npm run watch-css
   overflow-x: hidden; }
 
 nav, header, main, footer aside {
-  padding: 20px;
-  font-weight: 800; }
+  padding: 20px; }
 
 section {
   overflow-y: hidden; }
@@ -66,6 +65,17 @@ a {
     margin-bottom: 0; }
   .planes .col {
     padding: 2px 0 2px 0; }
+
+.card {
+  width: 18rem; }
+
+.novedadesCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .novedadesCardContainer .cardCont {
+    align-self: center;
+    margin-bottom: 10px; }
 
 .threeColumIconImg {
   width: auto;
@@ -116,7 +126,8 @@ a {
 
 nav {
   grid-area: nav;
-  background: rgba(0, 0, 0, 0.4); }
+  background: rgba(0, 0, 0, 0.4);
+  font-weight: 600; }
 
 #navImg {
   flex-grow: 1;
@@ -233,3 +244,9 @@ body {
   .bodyContacto {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header header" "main aside" "pie pie"; } }
+
+@media screen and (min-width: 920px) {
+  .novedadesCardContainer {
+    flex-direction: row; }
+    .novedadesCardContainer .cardCont {
+      align-self: auto; } }
