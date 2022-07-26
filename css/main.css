@@ -66,6 +66,10 @@ a {
   .planes .col {
     padding: 2px 0 2px 0; }
 
+.nosotrosCont {
+  padding-right: 30px;
+  padding-left: 30px; }
+
 .card {
   width: 18rem; }
 
