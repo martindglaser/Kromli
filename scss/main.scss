@@ -43,6 +43,7 @@ a{
 
 .planes{
   display: flex;
+  overflow-y: hidden;
   flex-direction: column;
   flex-grow: 1;
   button{
@@ -51,8 +52,16 @@ a{
   h2{
     margin-bottom: 0;
   }
-  .col{
-    padding: 2px 0 2px 0;
+  .table{
+    overflow-y: hidden;
+    td,th{
+      border-bottom-width: 0;
+    }
+    td{
+      padding: 2px 0 2px 0;
+    }
+    font-size: 15px;
+    font-weight: 400;
   }
 }
 
@@ -140,6 +149,9 @@ a{
   color: white;
 }
 
+.pointer{
+  cursor: pointer;
+}
 
 .logo{
   height: 60px;
@@ -266,11 +278,8 @@ body{
 }
 
 
-.planesD{
-  display: none;
-  overflow-y: hidden;
-}
-.planesM{
+
+/*.planesM{
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
@@ -285,18 +294,13 @@ body{
     display: flex;
     flex-direction: column;
   }
-}
+}*/
 
 @media screen and (min-width: 768px){
   .nosotrosCont{
     flex-direction: row;
   }
-  .planesD{
-    display: block;
-  }
-  .planesM{
-    display: none;
-  }
+
   .indexCont{
     flex-direction: row;
   }

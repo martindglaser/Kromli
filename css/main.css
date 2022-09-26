@@ -57,14 +57,21 @@ a {
 
 .planes {
   display: flex;
+  overflow-y: hidden;
   flex-direction: column;
   flex-grow: 1; }
   .planes button {
     margin: 10px 0 10px 0; }
   .planes h2 {
     margin-bottom: 0; }
-  .planes .col {
-    padding: 2px 0 2px 0; }
+  .planes .table {
+    overflow-y: hidden;
+    font-size: 15px;
+    font-weight: 400; }
+    .planes .table td, .planes .table th {
+      border-bottom-width: 0; }
+    .planes .table td {
+      padding: 2px 0 2px 0; }
 
 .nosotrosCont {
   padding-right: 30px;
@@ -136,6 +143,9 @@ a {
 
 .nav-link {
   color: white; }
+
+.pointer {
+  cursor: pointer; }
 
 .logo {
   height: 60px; }
@@ -226,30 +236,25 @@ body {
 #index-body {
   grid-template-rows: 100vh; }
 
-.planesD {
-  display: none;
-  overflow-y: hidden; }
-
-.planesM {
+/*.planesM{
   display: flex;
   flex-direction: column;
-  overflow-y: hidden; }
-  .planesM .buttonContainer {
+  overflow-y: hidden;
+  .buttonContainer{
     text-align: center;
-    padding: 10px 0 30px 0; }
-  .planesM .planesMCont {
-    align-self: center; }
-  .planesM .planesList {
+    padding: 10px 0 30px 0;
+  }
+  .planesMCont{
+    align-self: center;
+  }
+  .planesList{
     display: flex;
-    flex-direction: column; }
-
+    flex-direction: column;
+  }
+}*/
 @media screen and (min-width: 768px) {
   .nosotrosCont {
     flex-direction: row; }
-  .planesD {
-    display: block; }
-  .planesM {
-    display: none; }
   .indexCont {
     flex-direction: row; }
   .socialMediaContainer {
