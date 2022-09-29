@@ -3,19 +3,10 @@ npm run watch-css
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 .color1 {
-  color: #c43b01; }
-
-.color2 {
-  color: #db710e; }
-
-.color3 {
-  color: #fbb14e; }
-
-.color4 {
-  color: #fff291; }
+  background-color: #2C3E50; }
 
 .color5 {
-  color: #fffbbf; }
+  background-color: #f8efc9; }
 
 @keyframes slideInFromLeft {
   0% {
@@ -53,7 +44,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: white; }
+  color: #fffff0; }
 
 .planes {
   display: flex;
@@ -71,7 +62,7 @@ a {
     .planes .table td, .planes .table th {
       border-bottom-width: 0; }
     .planes .table td {
-      padding: 2px 0 2px 0; }
+      padding: 1.5px 0 1.5px 0; }
 
 .nosotrosCont {
   padding-right: 30px;
@@ -133,7 +124,7 @@ a {
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  color: white;
+  color: #fffff0;
   padding-top: 30vh;
   width: 100%; }
 
@@ -142,7 +133,7 @@ a {
   height: 622px; }
 
 .nav-link {
-  color: white; }
+  color: #fffff0; }
 
 .pointer {
   cursor: pointer; }
@@ -184,7 +175,7 @@ aside {
   margin-top: 86px; }
 
 footer {
-  background-color: #fff291;
+  background-color: #2C3E50;
   grid-area: pie;
   display: flex;
   flex-direction: column;
@@ -198,7 +189,7 @@ footer {
   align-self: center;
   padding: 10px 0 10px 0; }
   .socialMediaContainer a {
-    color: black;
+    color: #fffff0;
     font-size: 15px;
     padding-bottom: 5px; }
   .socialMediaContainer img {
@@ -210,7 +201,7 @@ footer {
   flex-grow: 1;
   align-self: center; }
   .datosContacto p {
-    color: black;
+    color: #fffff0;
     font-size: 15px;
     max-width: 300px;
     margin-bottom: 0; }
@@ -219,7 +210,7 @@ footer {
 
 body {
   display: grid;
-  background-color: #fffbbf;
+  background-color: #f8efc9;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: "header" "main" "pie"; }
@@ -231,7 +222,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  font-weight: 600; }
 
 #index-body {
   grid-template-rows: 100vh; }
