@@ -8,6 +8,21 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/animaciones.css">
 	<title>Kromli</title>
+	<style>
+nav.navbar{
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
+nav.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+
+nav.navbar.transparent {
+  background-color:rgba(0,0,0,0);
+}
+	</style>
 </head>
 <body id="index-body">
 	
@@ -23,13 +38,13 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
-		          <a class="nav-link" href="views/planes.html">Planes</a>
+		          <a class="nav-link" href="#separadorPlanes">Planes</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" href="views/novedades.html">Novedades</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="views/nosotros.html">Nosotros</a>
+		          <a class="nav-link" href="#separadorNosotros">Nosotros</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" href="views/contacto.html">Contacto</a>
@@ -60,6 +75,108 @@
 					<p class="width200">Enterate cuales son tus ganacias/perdidas y por que suceden</p>
 				</div>
 			</div>
+
+			<div id="separadorPlanes" class="separador"></div>
+
+			<div id="planes" class="transform planes text-center">
+				<div class="card-deck">
+				  <div class="card">
+				    <div class="card-body">
+				      	<h5 class="card-title">Plan Free</h5>
+				    	<h6 class="precioPlan precioFree">$0</h6>
+				      	<hr>
+				      	<ul class="caracteristicasList">
+							<li>20 Usuarios</li>
+							<li>2 Roles</li>
+							<li>Carga de horas</li>
+							<li>Super Aprobador</li>
+							<li>Gestion de Imputaciones</li>
+							<li>Gestión de usuarios</li>
+							<li>Reporte de Horas de Organización</li>
+							<li>Reporte Facturación</li>
+							<li>Reporte de Costo Recursos</li>
+							<li>Gastos Fijos</li>
+							<li>Visualización de Tipos de Cambios</li>
+							<li>Periodo de imputación</li>
+							<li>Reporte de Horas Clientes</li>
+							<li>Reporte de Horas imputaciones</li>
+							<li>Reporte de Vigencias de tarifas</li>
+						</ul>
+						<div class="planFooter">
+							<hr>
+					      	<button class="btn btn-primary">
+					      		Suscribirme a Free
+					      	</button>
+				      	</div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-body">
+				      	<h5 class="card-title">Plan Premium</h5>
+				      	<h6 class="precioPlan">$1 USD</h6>
+				      	<h6 class="descripcionPrecioPlan">Por usuario al mes</h6>
+				      	<hr>
+							<ul class="caracteristicasList">
+								<li>Usuarios Ilimitados</li>
+								<li>Roles Ilimitados</li>
+								<li>Carga de horas</li>
+								<li>Super Aprobador</li>
+								<li>Gestion de Imputaciones</li>
+								<li>Gestión de usuarios</li>
+								<li>Reporte de Horas de Organización</li>
+								<li>Reporte Facturación</li>
+								<li>Reporte de Costo Recursos</li>
+								<li>Gastos Fijos</li>
+								<li>Visualización de Tipos de Cambios</li>
+								<li>Periodo de imputación</li>
+								<li>Reporte de Horas Clientes</li>
+								<li>Reporte de Horas imputaciones</li>
+								<li>Reporte de Vigencias de tarifas</li>
+								<li>Reporte de Productividad Recursos</li>
+								<li>Gestión Roles</li>
+								<li>Reporte de Ganancias y pérdida</li>
+								<li>Cambio de Logo</li>
+								<li>Codificación de Imputaciones</li>
+								<li>Reservas de Puestos de Trabajo</li>
+							</ul>
+						<div class="planFooter">
+							<hr>
+					      	<button class="btn btn-primary">
+					      		Suscribirme a Premium
+					      	</button>
+				      	</div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+
+			<div id="separadorPlanes" class="separador"></div>
+
+			<div id="nosotros" class="transform">
+					<div class="nosotrosCont">
+						<p>
+							Somos una organización creada por desarrolladores e ingenieros en la búsqueda de generar eficiencia para las empresas que brindan servicios de todo tipo. Contamos con sede en Buenos Aires desde la cual desarrollamos los productos con alcance global, los productos que desarrollamos en Kromli son multilenguaje y multimoneda.
+						</p>
+						<div class="card">
+						  <img src="img/Martin-Glaser.jpeg" alt="Co fundador Martin Glaser">
+						  <div class="card-body">
+						    <p class="card-text">Martin Glaser, Co Fundador de Kromli</p>
+						  </div>
+						</div>
+					</div>
+					<div class="nosotrosCont nosotrosCont2">
+						<div class="card">
+						<img src="img/Ezequiel-Glaser.jpeg" alt="Co fundador Ezequiel Glaser">
+						  <div class="card-body">
+						    <p class="card-text">Ezequiel Glaser, Co Fundador de Kromli</p>
+						  </div>
+						</div>
+						<p>
+							En Kromli queremos generar valor para su empresa, desarrollamos una gran variedad de productos que buscan satisfacer las necesidades de las empresas que brindan servicios a otras empresas y a consumidores finales.
+						</p>
+					</div>
+				</div>
+
 		</section>
 	</main>
 	<br>
@@ -90,6 +207,23 @@
 			</p>
 		</div>
 	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vanillajs-scrollspy@3.0.3/dist/vanillajs-scrollspy.min.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(window).scroll(()=> {
+			navOpacity();
+		});
+		function navOpacity(){
+			if ($(document).scrollTop() > window.innerHeight - 86) {
+			  	$('nav').removeClass('transparent');
+				$('nav').addClass('opacidadNav');
+			} else {
+				$('nav').addClass('transparent');
+			  	$('nav').removeClass('opacidadNav');
+			}
+		}
+		navOpacity();
+	</script>
 </body>
 </html>

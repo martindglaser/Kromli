@@ -52,20 +52,74 @@ a{
   h2{
     margin-bottom: 0;
   }
-  .table{
-    overflow-y: hidden;
-    td,th{
-      border-bottom-width: 0;
+
+
+  .card-deck{
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    .card-body{
+      display: flex;
+      flex-direction: column;
+
+      .caracteristicasList{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 13px;
+        li:before {
+          content: '✓ ';
+          color: green;
+          font-weight: 600;
+        }
+        li{
+          text-align: center;
+        }
+      }
+
+      .planFooter{
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        .btn{
+          margin: 0 10px 5px 10px;
+        }
+      }
+      .precioPlan{
+        font-size: 17px;
+      }
+      .precioFree{
+        padding-bottom: 22.396px;
+      }
+      .descripcionPrecioPlan{
+        font-size: 12px;
+      }
     }
-    td{
-      padding: 1.5px 0 1.5px 0;
-    }
-    font-size: 15px;
-    font-weight: 400;
   }
 
 }
+@media screen and (min-width: 768px){
+  .planes{
+    .card-deck{
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+}
 
+
+
+
+
+
+.separador{
+  height: 100px;
+}
 
 .nosotrosCont{
   padding-right: 30px;
@@ -161,9 +215,13 @@ a{
 
 nav{
   grid-area: nav;
-  background: rgba(0, 0, 0, .4);
   font-weight: 600;
 }
+
+.opacidadNav{
+  background: rgba(0, 0, 0, .8);
+}
+
 
 #navImg{
   flex-grow: 1;

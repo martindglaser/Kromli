@@ -1,345 +1,74 @@
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-scrollspy@3.0.3/dist/vanillajs-scrollspy.min.js"></script>
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VanillaJS ScrollSpy</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      html, body {
+        height: 100%;
+      }
 
-<script src="../js/jquery.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<title>Kromli</title>
-</head>
-<body class="bodyPlanes">
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-	  <div class="container-fluid">
-	    <a class="navbar-brand" href="../index.html">
-	    	<img class="logo" src="../img/kromli_logo.png">
-	    </a>
-	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"></span>
-	    </button>
-	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-	        <li class="nav-item">
-	          <a class="nav-link" href="planes.html">Planes</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="novedades.html">Novedades</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="nosotros.html">Nosotros</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="contacto.html">Contacto</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
-	<main>
-		<h1 class="bottomMargin20">Planes</h1>
+      nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
 
+      nav a.active {
+        font-weight: bold;
+      }
 
-			<section>
-				<div class="transform planes text-center">
+      .page {
+        height: 100%;
+        padding: 80px 0;
+        width: 100%;
+        background-color: #ddd;
+      }
 
-					<table class="table table-sm table-striped table-hover">
-						<thead>
-							<th width="33%">Funcionalidades</th>
-							<th width="33%">Free</th>
-							<th width="33%">Premium</th>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Cantidad maxima de usuarios</td>
-								<td>20</td>
-								<td>Ilimitado</td>
-							</tr>
-							<tr>
-								<td>Roles</td>
-								<td class="pointer" onclick="$('#planFreeModal').modal('show');">2</td>
-								<td>Ilimitado</td>
-							</tr>
-							<tr>
-								<td>Carga de horas</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Super Aprobador</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Imputaciones</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Gestión de usuarios</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte de Horas de Organización</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte Facturación</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte de Costo Recursos</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Gastos Fijos</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Visualización de Tipos de Cambios </td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Periodo de imputación</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte de Horas Clientes</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte de Horas imputaciones</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte de Vigencias de tarifas</td>
-								<td>X</td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte de Productividad Recursos</td>
-								<td></td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Gestión Roles</td>
-								<td></td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reporte de Ganancias y pérdida</td>
-								<td></td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Cambio de Logo</td>
-								<td></td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Codificación de Imputaciones </td>
-								<td></td>
-								<td>X</td>
-							</tr>
-							<tr>
-								<td>Reservas de Puestos de Trabajo</td>
-								<td></td>
-								<td>X</td>
-							</tr>
-						</tbody>
-					</table>
+      .page:nth-child(even) { background-color: #fff; }
+    </style>
+  </head>
 
-					<!-- Modal -->
-					<div class="modal fade" id="planFreeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					  <div class="modal-dialog">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-					        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					      </div>
-					      <div class="modal-body">
-					        <table class="table table-sm table-striped table-hover">
-					        	<thead>
-					        		<th>Permisos</th>
-					        		<th>Propietario</th>
-					        		<th>Recurso</th>
-					        	</thead>
-					        	<tbody>
-									<tr>
-										<td>Cargar Horas</td>
-										<td>X</td>
-										<td>X</td>
-									</tr>
-									<tr>
-										<td>Aprobación de todas las horas</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>ABM Imputaciones</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Solo visualizacion Menu Imputaciones</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Gestión de Usuarios</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Horas Imputaciones</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Horas Organización</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Horas Clientes</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Facturación</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Costo Recursos</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Vigencia Tarifas</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Suscripción</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Periodo de Imputacion</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Gastos Fijos</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Ver tipos de cambio</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Pizarron home admin</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>ABM Clientes</td>
-										<td>X</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Gestión de Roles</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Gestion de Reservas</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Cambio de logo</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Recordatorios</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Codificacion Imputaciones</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Ganancias y Pérdidas</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>Productividad Recursos</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-					        	</tbody>
-					        </table>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
+  <body>
+    <nav id="navbar">
+      <a href="#home" title="Home" class="active">Home</a>
+      <a href="#portfolio" title="Portfolio">Portfolio</a>
+      <a href="#about" title="About">About</a>
+      <a href="#contact" title="Contact">Contact</a>
+    </nav>
 
-			</section>
-		</div>
-	</main>
-	<br>
-	<footer>
-		<div class="socialMediaContainer">
-			<a href="https://instagram.com/kromli" target="_blank">
-				<img src="../img/instagram_logo.png" alt="instagram">
-				@Kromi
-			</a>
-			<a href="https://linkedin.com/kromli" target="_blank">
-				<img src="../img/linkedin_logo.png" alt="linkedin">
-				@Kromli
-			</a>
-			<a href="https://twitter.com/kromli" target="_blank">
-				<img src="../img/twitter_logo.png" alt="twitter">
-				@Kromli
-			</a>
-		</div>
-		<div class="datosContacto">
-			<p>
-				Direccion: Franklin D. Roosevelt 2157, CABA
-			</p>
-			<p>
-				Telefono: 11 1234 5678
-			</p>
-			<p>
-				Email: info@krom.li
-			</p>
-		</div>
-	</footer>
+    <section id="home" class="page">
+      <h2 class="title">Home</h2>
+    </section>
 
-<!-- 
-	<script src="../bootstrap/js/bootstrap.js"></script> -->
-</body>
+    <section id="portfolio" class="page">
+      <h2 class="title">Portfolio</h2>
+    </section>
+
+    <section id="about" class="page">
+      <h2 class="title">About</h2>
+    </section>
+
+    <section id="contact" class="page">
+      <h2 class="title">Contact</h2>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-scrollspy@3.0.3/dist/vanillajs-scrollspy.min.js"></script>
+    <script>
+      const menu = document.querySelector('#navbar')
+      const scrollspy = VanillaScrollspy({ menu })
+      scrollspy.init()
+    </script>
+  </body>
 </html>
+
