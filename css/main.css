@@ -9,16 +9,25 @@ npm run watch-css
 .color5 {
   background-color: #f8efc9; }
 
-@keyframes slideInFromLeft {
+@keyframes slideInFromBottom {
   0% {
     transform: translateY(40px); }
   100% {
     transform: translateY(0); } }
 
 .transform {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
   padding-bottom: 40px;
   overflow-y: hidden; }
+
+@keyframes slideInFromBottomContent {
+  0% {
+    transform: translateY(80px); }
+  100% {
+    transform: translateY(0); } }
+
+.transformContent {
+  animation: 1.5s ease-out 0s 1 slideInFromBottomContent; }
 
 * {
   padding: 0;
@@ -26,9 +35,6 @@ npm run watch-css
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   overflow-x: hidden; }
-
-nav, header, main, footer aside {
-  padding: 20px; }
 
 section {
   overflow-y: hidden; }
@@ -51,7 +57,8 @@ a {
   display: flex;
   overflow-y: hidden;
   flex-direction: column;
-  flex-grow: 1; }
+  flex-grow: 1;
+  padding: 50px 0; }
   .planes button {
     margin: 10px 0 10px 0; }
   .planes h2 {
@@ -96,7 +103,7 @@ a {
     align-items: stretch; } }
 
 .separador {
-  height: 100px; }
+  height: 86px; }
 
 .nosotrosCont {
   padding-right: 30px;
@@ -180,7 +187,8 @@ nav {
   font-weight: 600; }
 
 .opacidadNav {
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px); }
 
 #navImg {
   flex-grow: 1;
@@ -191,13 +199,14 @@ aside {
   grid-area: aside; }
 
 header {
-  background-image: url("../img/header.jpg");
+  /*  background-image: url('../img/header.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
   grid-area: header;
-  padding: 0; }
+  padding: 0;
+  width: 100%; }
   header h1 {
     max-width: 350px; }
   header h2 {

@@ -6,7 +6,6 @@
   	<meta name="description" content="Gestiona tus horas desde cualquier lugar del mundo">
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/animaciones.css">
 	<title>Kromli</title>
 	<style>
 nav.navbar{
@@ -26,7 +25,7 @@ nav.navbar.transparent {
 </head>
 <body id="index-body">
 	
-	<header>
+	<header class="header">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 		  <div class="container-fluid">
 		    <a class="navbar-brand" href="index.html">
@@ -38,13 +37,13 @@ nav.navbar.transparent {
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
-		          <a class="nav-link" href="#separadorPlanes">Planes</a>
+		          <a class="nav-link" href="#planes">Planes</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" href="views/novedades.html">Novedades</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#separadorNosotros">Nosotros</a>
+		          <a class="nav-link" href="#nosotros">Nosotros</a>
 		        </li>
 		        <li class="nav-item">
 		          <a class="nav-link" href="views/contacto.html">Contacto</a>
@@ -61,7 +60,7 @@ nav.navbar.transparent {
 	</header>
 	<main>
 		<section>
-			<div class="textCenter indexCont">
+			<div class="textCenter indexCont transformViewport">
 				<div class="indexTextImg">
 					<img class="threeColumIconImg" src="img/chart_icon.png">
 					<p class="width200">Reportes increibles con informacion de valor</p>
@@ -76,9 +75,9 @@ nav.navbar.transparent {
 				</div>
 			</div>
 
-			<div id="separadorPlanes" class="separador"></div>
+			<div id="planes" class="separador"></div>
 
-			<div id="planes" class="transform planes text-center">
+			<div class="planes text-center transformViewport">
 				<div class="card-deck">
 				  <div class="card">
 				    <div class="card-body">
@@ -150,10 +149,10 @@ nav.navbar.transparent {
 				</div>
 			</div>
 
-			<div id="separadorPlanes" class="separador"></div>
+			<div id="nosotros" class="separador"></div>
 
-			<div id="nosotros" class="transform">
-					<div class="nosotrosCont">
+<!-- 			<div class="transform">
+ -->					<div class="nosotrosCont transformViewport">
 						<p>
 							Somos una organización creada por desarrolladores e ingenieros en la búsqueda de generar eficiencia para las empresas que brindan servicios de todo tipo. Contamos con sede en Buenos Aires desde la cual desarrollamos los productos con alcance global, los productos que desarrollamos en Kromli son multilenguaje y multimoneda.
 						</p>
@@ -164,7 +163,7 @@ nav.navbar.transparent {
 						  </div>
 						</div>
 					</div>
-					<div class="nosotrosCont nosotrosCont2">
+					<div class="nosotrosCont nosotrosCont2 transformViewport">
 						<div class="card">
 						<img src="img/Ezequiel-Glaser.jpeg" alt="Co fundador Ezequiel Glaser">
 						  <div class="card-body">
@@ -175,7 +174,9 @@ nav.navbar.transparent {
 							En Kromli queremos generar valor para su empresa, desarrollamos una gran variedad de productos que buscan satisfacer las necesidades de las empresas que brindan servicios a otras empresas y a consumidores finales.
 						</p>
 					</div>
-				</div>
+<!-- 				</div>
+ -->
+
 
 		</section>
 	</main>
@@ -224,6 +225,39 @@ nav.navbar.transparent {
 			}
 		}
 		navOpacity();
+	</script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" integrity="sha512-FRX6MYITclzDyyMmSQLgZoZTfE+GLzAQpjs15adVZMY6AqhsrBLx8UZwp4FoqrrRFWY9TiaPwja7EY5fk309vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+	$(document).ready(function(){
+	$('.transformViewport').viewportChecker({
+	  // Class to add to the elements when they are visible
+	  classToAdd: 'transformContent',
+	 
+	  // The offset of the elements (let them appear earlier or later)
+	  offset: 0,
+	 
+	  // Add the possibility to remove the class if the elements are not visible
+	  repeat: false,
+	 
+	  // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
+	  callbackFunction: function(elem, action){}
+	  });
+	});
+	</script>
+
+
+	<script src="node_modules/jquery-parallax.js/parallax.min.js"></script>
+	<script>
+		$('.header').parallax({
+			imageSrc: 'img/header.jpg',
+			speed: 0.3,
+		});
+		$('.planes').parallax({
+			imageSrc: 'img/planes-background.jpg',
+			speed: 0.3,
+		});
 	</script>
 </body>
 </html>

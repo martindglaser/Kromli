@@ -16,7 +16,6 @@ npm run watch-css
 }
 
 nav, header, main, footer aside{
-  padding: 20px;
 }
 
 section{
@@ -46,6 +45,7 @@ a{
   overflow-y: hidden;
   flex-direction: column;
   flex-grow: 1;
+  padding: 50px 0;
   button{
     margin: 10px 0 10px 0;
   }
@@ -118,7 +118,7 @@ a{
 
 
 .separador{
-  height: 100px;
+  height: 86px;
 }
 
 .nosotrosCont{
@@ -219,7 +219,8 @@ nav{
 }
 
 .opacidadNav{
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .7);
+  backdrop-filter: blur(10px);
 }
 
 
@@ -236,13 +237,14 @@ aside{
 
 
 header{
-  background-image: url('../img/header.jpg');
+/*  background-image: url('../img/header.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
   grid-area: header;
   padding: 0;
+  width: 100%;
   h1{
     max-width: 350px;
   }
