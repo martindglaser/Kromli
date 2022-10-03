@@ -53,6 +53,9 @@ a {
   text-decoration: none;
   color: #fffff0; }
 
+.hyperlink {
+  color: blue; }
+
 .planes {
   display: flex;
   overflow-y: hidden;
@@ -63,6 +66,9 @@ a {
     margin: 10px 0 10px 0; }
   .planes h2 {
     margin-bottom: 0; }
+  .planes .table-roles {
+    font-size: 12px;
+    font-weight: 600; }
   .planes .card-deck {
     align-self: center;
     width: 100%;
@@ -209,6 +215,10 @@ a {
 
 .boton:hover {
   background-color: #f76411;
+  color: ivory; }
+
+.boton:focus {
+  background-color: #f94110;
   color: ivory; }
 
 nav {

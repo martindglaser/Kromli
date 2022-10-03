@@ -39,6 +39,9 @@ a{
   color: $ivory;
 }
 
+.hyperlink{
+  color: blue;
+}
 
 .planes{
   display: flex;
@@ -53,6 +56,10 @@ a{
     margin-bottom: 0;
   }
 
+  .table-roles{
+    font-size: 12px;
+    font-weight: 600;
+  }
 
   .card-deck{
     align-self: center;
@@ -242,6 +249,10 @@ a{
 }
 .boton:hover{
   background-color: rgba(247,100,17,255);
+  color: ivory;
+}
+.boton:focus{
+  background-color: rgba(249,65,16,255);
   color: ivory;
 }
 

@@ -49,9 +49,11 @@ nav.navbar.transparent {
 		          <a class="nav-link" href="views/contacto.html">Contacto</a>
 		        </li>
 		        <li>
-		        	<button class="btn boton launchApp">
-		        		Launch App
-		        	</button>
+		        	<a href="#" target="_blank">
+			        	<button class="btn boton launchApp">
+			        		Launch App
+			        	</button>
+		        	</a>
 		        </li>
 		      </ul>
 		    </div>
@@ -91,7 +93,7 @@ nav.navbar.transparent {
 				      	<hr>
 				      	<ul class="caracteristicasList">
 							<li>20 Usuarios</li>
-							<li>2 Roles</li>
+							<li class="pointer hyperlink" onclick="$('#planFreeModal').modal('show')">2 Roles</li>
 							<li>Carga de horas</li>
 							<li>Super Aprobador</li>
 							<li>Gestion de Imputaciones</li>
@@ -152,6 +154,148 @@ nav.navbar.transparent {
 				    </div>
 				  </div>
 				</div>
+<!-- Modal -->
+					<div class="modal fade" id="planFreeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Roles plan Free</h5>
+					        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					      </div>
+					      <div class="modal-body">
+					        <table class="table table-sm table-striped table-hover table-roles">
+					        	<thead>
+					        		<th>Permisos</th>
+					        		<th>Propietario</th>
+					        		<th>Recurso</th>
+					        	</thead>
+					        	<tbody>
+									<tr>
+										<td>Cargar Horas</td>
+										<td>X</td>
+										<td>X</td>
+									</tr>
+									<tr>
+										<td>Aprobación de todas las horas</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>ABM Imputaciones</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Solo visualizacion Menu Imputaciones</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gestión de Usuarios</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Horas Imputaciones</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Horas Organización</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Horas Clientes</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Facturación</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Costo Recursos</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Vigencia Tarifas</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Suscripción</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Periodo de Imputacion</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gastos Fijos</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Ver tipos de cambio</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Pizarron home admin</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>ABM Clientes</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gestión de Roles</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gestion de Reservas</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Cambio de logo</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Recordatorios</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Codificacion Imputaciones</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Ganancias y Pérdidas</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Productividad Recursos</td>
+										<td></td>
+										<td></td>
+									</tr>
+					        	</tbody>
+					        </table>
+					      </div>
+					    </div>
+					  </div>
+					</div>
 			</div>
 
 			<div id="nosotros" class="separador"></div>
@@ -186,10 +330,6 @@ nav.navbar.transparent {
 						</div>
 					</div>
 					<div class="separador"></div>
-<!-- 				</div>
- -->
-
-
 		</section>
 	</main>
 	<br>
