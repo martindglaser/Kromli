@@ -74,7 +74,7 @@ a{
         font-size: 13px;
         li:before {
           content: '✓ ';
-          color: green;
+          color: rgba(249,65,16,255);
           font-weight: 600;
         }
         li{
@@ -90,8 +90,16 @@ a{
           margin: 0 10px 5px 10px;
         }
       }
+      .card-title{
+        color: rgba(249,65,16,255);
+        font-weight: 600;
+      }
       .precioPlan{
         font-size: 17px;
+        color: rgba(249,65,16,255)
+      }
+      .descripcionPrecioPlan{
+        color: rgba(249,65,16,255)        
       }
       .precioFree{
         padding-bottom: 22.396px;
@@ -130,8 +138,18 @@ a{
   .card{
     align-self: center;
   }
+  .parrafoNosotros{
+    align-self: center;
+    font-weight: 600;
+    height: 250px;
+    display: flex;
+    width: 30%;
+    border:1px solid rgba(249,65,16,255);
+    align-items: center;
+    justify-content: center;
+  }
   p{
-    max-width: 50%;
+    width: 100%;
     align-self: center;
     margin: 15px;
   }
@@ -143,6 +161,11 @@ a{
 
 .card{
   width: 18rem; 
+}
+.card-text{
+  font-size: 14px;
+/*  width: 100%;
+  margin: 0;*/
 }
 .novedadesCardContainer{
   display: flex;
@@ -212,10 +235,23 @@ a{
   height: 60px;
 }
 
+.boton{
+    background-color: rgba(249,65,16,255);
+    border: none;
+    color: ivory;
+}
+.boton:hover{
+  background-color: rgba(247,100,17,255);
+  color: ivory;
+}
 
 nav{
   grid-area: nav;
   font-weight: 600;
+  .launchApp{
+    margin-left: 10px;
+  }
+
 }
 
 .opacidadNav{

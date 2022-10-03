@@ -80,7 +80,7 @@ a {
         font-size: 13px; }
         .planes .card-deck .card-body .caracteristicasList li:before {
           content: '✓ ';
-          color: green;
+          color: #f94110;
           font-weight: 600; }
         .planes .card-deck .card-body .caracteristicasList li {
           text-align: center; }
@@ -90,8 +90,14 @@ a {
         margin-top: auto; }
         .planes .card-deck .card-body .planFooter .btn {
           margin: 0 10px 5px 10px; }
+      .planes .card-deck .card-body .card-title {
+        color: #f94110;
+        font-weight: 600; }
       .planes .card-deck .card-body .precioPlan {
-        font-size: 17px; }
+        font-size: 17px;
+        color: #f94110; }
+      .planes .card-deck .card-body .descripcionPrecioPlan {
+        color: #f94110; }
       .planes .card-deck .card-body .precioFree {
         padding-bottom: 22.396px; }
       .planes .card-deck .card-body .descripcionPrecioPlan {
@@ -113,8 +119,17 @@ a {
   justify-content: space-around; }
   .nosotrosCont .card {
     align-self: center; }
+  .nosotrosCont .parrafoNosotros {
+    align-self: center;
+    font-weight: 600;
+    height: 250px;
+    display: flex;
+    width: 30%;
+    border: 1px solid #f94110;
+    align-items: center;
+    justify-content: center; }
   .nosotrosCont p {
-    max-width: 50%;
+    width: 100%;
     align-self: center;
     margin: 15px; }
 
@@ -123,6 +138,11 @@ a {
 
 .card {
   width: 18rem; }
+
+.card-text {
+  font-size: 14px;
+  /*  width: 100%;
+  margin: 0;*/ }
 
 .novedadesCardContainer {
   display: flex;
@@ -182,9 +202,20 @@ a {
 .logo {
   height: 60px; }
 
+.boton {
+  background-color: #f94110;
+  border: none;
+  color: ivory; }
+
+.boton:hover {
+  background-color: #f76411;
+  color: ivory; }
+
 nav {
   grid-area: nav;
   font-weight: 600; }
+  nav .launchApp {
+    margin-left: 10px; }
 
 .opacidadNav {
   background: rgba(0, 0, 0, 0.7);
