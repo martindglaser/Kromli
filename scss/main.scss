@@ -43,6 +43,11 @@ a{
   color: blue;
 }
 
+.noOverflow{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .planes{
   display: flex;
   overflow-y: hidden;
@@ -174,13 +179,20 @@ a{
 /*  width: 100%;
   margin: 0;*/
 }
-.novedadesCardContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  .cardCont{
-    align-self:center;
-    margin-bottom: 10px;
+.featuresContainer{
+  .featuresImages{
+    display: flex;
+    flex-direction: column;
+    .image1{
+      max-width: 70%;
+    }
+    .image2{
+      max-width: 70%;
+      align-self: flex-end;
+    }
+    .image3{
+      max-width: 50%;
+    }
   }
 }
 
@@ -437,10 +449,9 @@ body{
 
 
 @media screen and (min-width: 920px){
-  .novedadesCardContainer{
-    flex-direction: row;
-    .cardCont{
-      align-self:auto;
+  .featuresContainer{
+    .featuresImages{
+
     }
   }
 }
