@@ -73,9 +73,10 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    .card{
+      margin-bottom: 20px;
 
-
-    .card-body{
+      .card-body{
       display: flex;
       flex-direction: column;
 
@@ -92,7 +93,10 @@ a{
         li{
           text-align: center;
         }
-      }
+      } 
+    }
+
+
 
       .planFooter{
         display: flex;
@@ -184,14 +188,14 @@ a{
     display: flex;
     flex-direction: column;
     .image1{
-      max-width: 70%;
+      max-width: 100%;
     }
     .image2{
-      max-width: 70%;
+      max-width: 100%;
       align-self: flex-end;
     }
     .image3{
-      max-width: 50%;
+      max-width: 100%;
     }
   }
 }
@@ -448,10 +452,18 @@ body{
 }
 
 
-@media screen and (min-width: 920px){
+@media screen and (min-width: 767px){
   .featuresContainer{
     .featuresImages{
-
+      .image1{
+        max-width: 70%;
+      }
+      .image2{
+        max-width: 70%;
+      }
+      .image3{
+        max-width: 50%;
+      }
     }
   }
 }

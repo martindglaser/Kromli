@@ -80,37 +80,39 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly; }
-    .planes .card-deck .card-body {
-      display: flex;
-      flex-direction: column; }
-      .planes .card-deck .card-body .caracteristicasList {
+    .planes .card-deck .card {
+      margin-bottom: 20px; }
+      .planes .card-deck .card .card-body {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 13px; }
-        .planes .card-deck .card-body .caracteristicasList li:before {
-          content: '✓ ';
-          color: #f94110;
-          font-weight: 600; }
-        .planes .card-deck .card-body .caracteristicasList li {
-          text-align: center; }
-      .planes .card-deck .card-body .planFooter {
+        flex-direction: column; }
+        .planes .card-deck .card .card-body .caracteristicasList {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 13px; }
+          .planes .card-deck .card .card-body .caracteristicasList li:before {
+            content: '✓ ';
+            color: #f94110;
+            font-weight: 600; }
+          .planes .card-deck .card .card-body .caracteristicasList li {
+            text-align: center; }
+      .planes .card-deck .card .planFooter {
         display: flex;
         flex-direction: column;
         margin-top: auto; }
-        .planes .card-deck .card-body .planFooter .btn {
+        .planes .card-deck .card .planFooter .btn {
           margin: 0 10px 5px 10px; }
-      .planes .card-deck .card-body .card-title {
+      .planes .card-deck .card .card-title {
         color: #f94110;
         font-weight: 600; }
-      .planes .card-deck .card-body .precioPlan {
+      .planes .card-deck .card .precioPlan {
         font-size: 17px;
         color: #f94110; }
-      .planes .card-deck .card-body .descripcionPrecioPlan {
+      .planes .card-deck .card .descripcionPrecioPlan {
         color: #f94110; }
-      .planes .card-deck .card-body .precioFree {
+      .planes .card-deck .card .precioFree {
         padding-bottom: 22.396px; }
-      .planes .card-deck .card-body .descripcionPrecioPlan {
+      .planes .card-deck .card .descripcionPrecioPlan {
         font-size: 12px; }
 
 @media screen and (min-width: 768px) {
@@ -158,12 +160,12 @@ a {
   display: flex;
   flex-direction: column; }
   .featuresContainer .featuresImages .image1 {
-    max-width: 70%; }
+    max-width: 100%; }
   .featuresContainer .featuresImages .image2 {
-    max-width: 70%;
+    max-width: 100%;
     align-self: flex-end; }
   .featuresContainer .featuresImages .image3 {
-    max-width: 50%; }
+    max-width: 100%; }
 
 .threeColumIconImg {
   width: auto;
@@ -352,3 +354,11 @@ body {
   .bodyContacto {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header header" "main aside" "pie pie"; } }
+
+@media screen and (min-width: 767px) {
+  .featuresContainer .featuresImages .image1 {
+    max-width: 70%; }
+  .featuresContainer .featuresImages .image2 {
+    max-width: 70%; }
+  .featuresContainer .featuresImages .image3 {
+    max-width: 50%; } }
