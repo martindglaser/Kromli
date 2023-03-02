@@ -6,12 +6,26 @@
   	<meta name="description" content="Gestiona tus horas desde cualquier lugar del mundo">
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/animaciones.css">
 	<title>Kromli</title>
+	<style>
+nav.navbar{
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
+nav.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+
+nav.navbar.transparent {
+  background-color:rgba(0,0,0,0);
+}
+	</style>
 </head>
 <body id="index-body">
 	
-	<header>
+	<header class="header">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 		  <div class="container-fluid">
 		    <a class="navbar-brand" href="index.html">
@@ -23,16 +37,20 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
-		          <a class="nav-link" href="views/planes.html">Planes</a>
+		          <a class="nav-link" href="#features">Features</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="views/novedades.html">Novedades</a>
+		          <a class="nav-link" href="#planes">Pricing</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="views/nosotros.html">Nosotros</a>
+		          <a class="nav-link" href="#nosotros">Nosotros</a>
 		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="views/contacto.html">Contacto</a>
+		        <li>
+		        	<a href="#" target="_blank">
+			        	<button class="btn boton launchApp">
+			        		Launch App
+			        	</button>
+		        	</a>
 		        </li>
 		      </ul>
 		    </div>
@@ -46,20 +64,294 @@
 	</header>
 	<main>
 		<section>
-			<div class="textCenter indexCont">
+
+			<div class="textCenter indexCont transformViewport">
 				<div class="indexTextImg">
 					<img class="threeColumIconImg" src="img/chart_icon.png">
 					<p class="width200">Reportes increibles con informacion de valor</p>
 				</div>
 				<div class="indexTextImg">
 					<img class="threeColumIconImg" src="img/client_icon.png">
-					<p class="width200">Calcuamos cuanto dinero le tenes que facturar a tus clientes</p>
+					<p class="width200">Calculamos cuanto dinero le tenes que facturar a tus clientes</p>
 				</div>
 				<div class="indexTextImg">
 					<img class="threeColumIconImg" src="img/money_icon.png">
-					<p class="width200">Enterate cuales son tus ganacias/perdidas y por que suceden</p>
+					<p class="width200">Enterate cuales son tus ganacias/pérdidas y por que suceden</p>
 				</div>
 			</div>
+
+
+			<div class="separador" id="features"></div>
+			<div class="featuresContainer">
+				<div class="featuresImages noOverflow container">
+					<figure class="figure image1 transformViewport">
+					  <img src="img/reporte-timesheet.png" class="figure-img img-fluid rounded" alt="...">
+					  <figcaption class="figure-caption">Grafico de horas trabajadas para cada proyecto.</figcaption>
+					</figure>
+
+					<figure class="figure image2 transformViewport">
+					  <img src="img/reporte-ganancias-y-perdidas.png" class="figure-img img-fluid rounded" alt="...">
+					  <figcaption class="figure-caption text-end">Reporte de Ganancias y Perdidas.</figcaption>
+					</figure>
+
+					<figure class="figure image3 transformViewport">
+					  <img src="img/carga-de-horas.png" class="figure-img img-fluid rounded" alt="...">
+					  <figcaption class="figure-caption">Carga de horas.</figcaption>
+					</figure>
+				</div>
+
+			</div>
+
+
+
+			<div id="planes" class="separador"></div>
+
+			<div class="planes text-center transformViewport">
+				<div class="card-deck">
+				  <div class="card">
+				    <div class="card-body">
+				      	<h5 class="card-title">Plan Free</h5>
+				    	<h6 class="precioPlan precioFree">$0</h6>
+				      	<hr>
+				      	<ul class="caracteristicasList">
+							<li>20 Usuarios</li>
+							<li class="pointer hyperlink" onclick="$('#planFreeModal').modal('show')">2 Roles</li>
+							<li>Carga de horas</li>
+							<li>Super Aprobador</li>
+							<li>Gestion de Imputaciones</li>
+							<li>Gestión de usuarios</li>
+							<li>Reporte de Horas de Organización</li>
+							<li>Reporte Facturación</li>
+							<li>Reporte de Costo Recursos</li>
+							<li>Gastos Fijos</li>
+							<li>Visualización de Tipos de Cambios</li>
+							<li>Periodo de imputación</li>
+							<li>Reporte de Horas Clientes</li>
+							<li>Reporte de Horas imputaciones</li>
+							<li>Reporte de Vigencias de tarifas</li>
+						</ul>
+						<div class="planFooter">
+							<hr>
+					      	<button class="btn boton">
+					      		Suscribirme a Free
+					      	</button>
+				      	</div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-body">
+				      	<h5 class="card-title">Plan Premium</h5>
+				      	<h6 class="precioPlan">$1 USD</h6>
+				      	<h6 class="descripcionPrecioPlan">Por usuario al mes</h6>
+				      	<hr>
+							<ul class="caracteristicasList">
+								<li>Usuarios Ilimitados</li>
+								<li>Roles Ilimitados</li>
+								<li>Carga de horas</li>
+								<li>Super Aprobador</li>
+								<li>Gestion de Imputaciones</li>
+								<li>Gestión de usuarios</li>
+								<li>Reporte de Horas de Organización</li>
+								<li>Reporte Facturación</li>
+								<li>Reporte de Costo Recursos</li>
+								<li>Gastos Fijos</li>
+								<li>Visualización de Tipos de Cambios</li>
+								<li>Periodo de imputación</li>
+								<li>Reporte de Horas Clientes</li>
+								<li>Reporte de Horas imputaciones</li>
+								<li>Reporte de Vigencias de tarifas</li>
+								<li>Reporte de Productividad Recursos</li>
+								<li>Gestión Roles</li>
+								<li>Reporte de Ganancias y pérdida</li>
+								<li>Cambio de Logo</li>
+								<li>Codificación de Imputaciones</li>
+								<li>Reservas de Puestos de Trabajo</li>
+							</ul>
+						<div class="planFooter">
+							<hr>
+					      	<button class="btn boton">
+					      		Suscribirme a Premium
+					      	</button>
+				      	</div>
+				    </div>
+				  </div>
+				</div>
+<!-- Modal -->
+					<div class="modal fade" id="planFreeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Roles plan Free</h5>
+					        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					      </div>
+					      <div class="modal-body">
+					        <table class="table table-sm table-striped table-hover table-roles">
+					        	<thead>
+					        		<th>Permisos</th>
+					        		<th>Propietario</th>
+					        		<th>Recurso</th>
+					        	</thead>
+					        	<tbody>
+									<tr>
+										<td>Cargar Horas</td>
+										<td>X</td>
+										<td>X</td>
+									</tr>
+									<tr>
+										<td>Aprobación de todas las horas</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>ABM Imputaciones</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Solo visualizacion Menu Imputaciones</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gestión de Usuarios</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Horas Imputaciones</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Horas Organización</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Horas Clientes</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Facturación</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Costo Recursos</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Vigencia Tarifas</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Suscripción</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Periodo de Imputacion</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gastos Fijos</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Ver tipos de cambio</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Pizarron home admin</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>ABM Clientes</td>
+										<td>X</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gestión de Roles</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Gestion de Reservas</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Cambio de logo</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Recordatorios</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Codificacion Imputaciones</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Ganancias y Pérdidas</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Productividad Recursos</td>
+										<td></td>
+										<td></td>
+									</tr>
+					        	</tbody>
+					        </table>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+			</div>
+
+			<div id="nosotros" class="separador"></div>
+
+<!-- 			<div class="transform">
+ -->					<div class="nosotrosCont transformViewport">
+ 							<div class="parrafoNosotros rounded">
+								<p>
+									Somos una organización creada por desarrolladores e ingenieros en la búsqueda de generar eficiencia para las empresas que brindan servicios de todo tipo. Contamos con sede en Buenos Aires desde la cual desarrollamos los productos con alcance global, los productos que desarrollamos en Kromli son multilenguaje y multimoneda.
+								</p>
+							</div>
+							<div>
+								<div class="card">
+								  <img src="img/Martin-Glaser.jpeg" alt="Co fundador Martin Glaser">
+								  <div class="card-body">
+								    <p class="card-text">Martin Glaser, Co Fundador de Kromli</p>
+								  </div>
+								</div>
+							</div>
+						</div>
+					<div class="nosotrosCont nosotrosCont2 transformViewport">
+						<div class="card">
+						<img src="img/Ezequiel-Glaser.jpeg" alt="Co fundador Ezequiel Glaser">
+						  <div class="card-body">
+						    <p class="card-text">Ezequiel Glaser, Co Fundador de Kromli</p>
+						  </div>
+						</div>
+						<div class="parrafoNosotros rounded">
+							<p>
+								En Kromli queremos generar valor para su empresa, desarrollamos una gran variedad de productos que buscan satisfacer las necesidades de las empresas que brindan servicios a otras empresas y a consumidores finales.
+							</p>
+						</div>
+					</div>
+					<div class="separador"></div>
 		</section>
 	</main>
 	<br>
@@ -80,16 +372,60 @@
 		</div>
 		<div class="datosContacto">
 			<p>
-				Direccion: Franklin D. Roosevelt 2157, CABA
-			</p>
-			<p>
-				Telefono: 11 1234 5678
-			</p>
-			<p>
 				Email: info@krom.li
 			</p>
 		</div>
 	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vanillajs-scrollspy@3.0.3/dist/vanillajs-scrollspy.min.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(window).scroll(()=> {
+			navOpacity();
+		});
+		function navOpacity(){
+			if ($(document).scrollTop() > window.innerHeight - 86) {
+			  	$('nav').removeClass('transparent');
+				$('nav').addClass('opacidadNav');
+			} else {
+				$('nav').addClass('transparent');
+			  	$('nav').removeClass('opacidadNav');
+			}
+		}
+		navOpacity();
+	</script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" integrity="sha512-FRX6MYITclzDyyMmSQLgZoZTfE+GLzAQpjs15adVZMY6AqhsrBLx8UZwp4FoqrrRFWY9TiaPwja7EY5fk309vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+	$(document).ready(function(){
+	$('.transformViewport').viewportChecker({
+	  // Class to add to the elements when they are visible
+	  classToAdd: 'transformContent',
+	 
+	  // The offset of the elements (let them appear earlier or later)
+	  offset: 0,
+	 
+	  // Add the possibility to remove the class if the elements are not visible
+	  repeat: false,
+	 
+	  // Callback to do after a class was added to an element. Action will return "add" or "remove", depending if the class was added or removed
+	  callbackFunction: function(elem, action){}
+	  });
+	});
+	</script>
+
+
+	<script src="node_modules/jquery-parallax.js/parallax.min.js"></script>
+	<script>
+		$('.header').parallax({
+			imageSrc: 'img/header.jpg',
+			speed: 0.3,
+		});
+		$('.planes').parallax({
+			imageSrc: 'img/planes-background.jpg',
+			speed: 0.3,
+		});
+	</script>
 </body>
 </html>

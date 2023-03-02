@@ -16,7 +16,6 @@ npm run watch-css
 }
 
 nav, header, main, footer aside{
-  padding: 20px;
 }
 
 section{
@@ -37,34 +36,114 @@ h2{
 }
 a{
   text-decoration: none;
-  color: white;
+  color: $ivory;
 }
 
+.hyperlink{
+  color: blue;
+}
+
+.noOverflow{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
 .planes{
   display: flex;
   overflow-y: hidden;
   flex-direction: column;
   flex-grow: 1;
+  padding: 50px 0;
   button{
     margin: 10px 0 10px 0;
   }
   h2{
     margin-bottom: 0;
   }
-  .table{
-    overflow-y: hidden;
-    td,th{
-      border-bottom-width: 0;
+
+  .table-roles{
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .card-deck{
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .card{
+      margin-bottom: 20px;
+
+      .card-body{
+      display: flex;
+      flex-direction: column;
+
+      .caracteristicasList{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 13px;
+        li:before {
+          content: '✓ ';
+          color: rgba(249,65,16,255);
+          font-weight: 600;
+        }
+        li{
+          text-align: center;
+        }
+      } 
     }
-    td{
-      padding: 2px 0 2px 0;
+
+
+
+      .planFooter{
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        .btn{
+          margin: 0 10px 5px 10px;
+        }
+      }
+      .card-title{
+        color: rgba(249,65,16,255);
+        font-weight: 600;
+      }
+      .precioPlan{
+        font-size: 17px;
+        color: rgba(249,65,16,255)
+      }
+      .descripcionPrecioPlan{
+        color: rgba(249,65,16,255)        
+      }
+      .precioFree{
+        padding-bottom: 22.396px;
+      }
+      .descripcionPrecioPlan{
+        font-size: 12px;
+      }
     }
-    font-size: 15px;
-    font-weight: 400;
+  }
+
+}
+@media screen and (min-width: 768px){
+  .planes{
+    .card-deck{
+      flex-direction: row;
+      align-items: stretch;
+    }
   }
 }
 
+
+
+
+
+
+.separador{
+  height: 86px;
+}
 
 .nosotrosCont{
   padding-right: 30px;
@@ -75,8 +154,18 @@ a{
   .card{
     align-self: center;
   }
+  .parrafoNosotros{
+    align-self: center;
+    font-weight: 600;
+    height: 250px;
+    display: flex;
+    width: 30%;
+    border:1px solid rgba(249,65,16,255);
+    align-items: center;
+    justify-content: center;
+  }
   p{
-    max-width: 50%;
+    width: 100%;
     align-self: center;
     margin: 15px;
   }
@@ -89,13 +178,25 @@ a{
 .card{
   width: 18rem; 
 }
-.novedadesCardContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  .cardCont{
-    align-self:center;
-    margin-bottom: 10px;
+.card-text{
+  font-size: 14px;
+/*  width: 100%;
+  margin: 0;*/
+}
+.featuresContainer{
+  .featuresImages{
+    display: flex;
+    flex-direction: column;
+    .image1{
+      max-width: 100%;
+    }
+    .image2{
+      max-width: 100%;
+      align-self: flex-end;
+    }
+    .image3{
+      max-width: 100%;
+    }
   }
 }
 
@@ -135,7 +236,7 @@ a{
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  color: white;
+  color: $ivory;
   padding-top: 30vh;
   width: 100%;
 }
@@ -146,7 +247,7 @@ a{
 }
 
 .nav-link{
-  color: white;
+  color: $ivory;
 }
 
 .pointer{
@@ -157,12 +258,34 @@ a{
   height: 60px;
 }
 
+.boton{
+    background-color: rgba(249,65,16,255);
+    border: none;
+    color: ivory;
+}
+.boton:hover{
+  background-color: rgba(247,100,17,255);
+  color: ivory;
+}
+.boton:focus{
+  background-color: rgba(249,65,16,255);
+  color: ivory;
+}
 
 nav{
   grid-area: nav;
-  background: rgba(0, 0, 0, .4);
   font-weight: 600;
+  .launchApp{
+    margin-left: 10px;
+  }
+
 }
+
+.opacidadNav{
+  background: rgba(0, 0, 0, .7);
+  backdrop-filter: blur(10px);
+}
+
 
 #navImg{
   flex-grow: 1;
@@ -177,13 +300,14 @@ aside{
 
 
 header{
-  background-image: url('../img/header.jpg');
+/*  background-image: url('../img/header.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
   grid-area: header;
   padding: 0;
+  width: 100%;
   h1{
     max-width: 350px;
   }
@@ -205,7 +329,7 @@ aside{
 
 
 footer{
-  background-color: $color4;
+  background-color: $color1;
   grid-area: pie;
   display: flex;
   flex-direction: column;
@@ -220,7 +344,7 @@ footer{
   align-self: center;
   padding: 10px 0 10px 0;
   a{
-    color: black;
+    color: $ivory;
     font-size: 15px;
     padding-bottom: 5px;
   }
@@ -235,7 +359,7 @@ footer{
   flex-grow: 1;
   align-self: center;
   p{
-    color: black;
+    color: $ivory;
     font-size: 15px;
     max-width: 300px;
     margin-bottom: 0;
@@ -271,6 +395,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  font-weight: 600;
 }
 
 #index-body{
@@ -327,11 +452,18 @@ body{
 }
 
 
-@media screen and (min-width: 920px){
-  .novedadesCardContainer{
-    flex-direction: row;
-    .cardCont{
-      align-self:auto;
+@media screen and (min-width: 767px){
+  .featuresContainer{
+    .featuresImages{
+      .image1{
+        max-width: 70%;
+      }
+      .image2{
+        max-width: 70%;
+      }
+      .image3{
+        max-width: 50%;
+      }
     }
   }
 }
